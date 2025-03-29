@@ -6,12 +6,13 @@ import locationIconUrl from './images/location.svg';
 import circleIconUrl from './images/circle.svg';
 
 export interface ProfileProps {
+    id : number;
     avatarUrl : string;
     name: string;
     surname: string;
     job : string;
     email : string;
-    phoneNumber : number;
+    phoneNumber : string;
     webSite : string;
     town : string;
     specialisations : {
@@ -37,18 +38,18 @@ function ProfileCard(profile: ProfileProps) {
 
             <div className = "ProfileCard__header-info">
                 <h1>
-                    <p> {profile.name} </p>
-                    <p> {profile.surname} </p>
-                    <p> {profile.job} </p>
+                    <span className="ProfileCard__header-info-name"> {profile.name} </span>
+                    <span className="ProfileCard__header-info-surname"> {profile.surname} </span>
+                    <span className="ProfileCard__header-info-job"> {profile.job} </span>
                 </h1>
             </div>
 
             <div className = "ProfileCard__body-info">
                 <h2>
-                    <p> <img src = {mailIconUrl}/> {profile.email} </p>
-                    <p> <img src = {phoneIconUrl}/> {profile.phoneNumber} </p>
-                    <p> <img src = {webSiteIconUrl}/> {profile.webSite} </p>
-                    <p> <img src = {locationIconUrl}/> {profile.town} </p>
+                    <p> <img src = {mailIconUrl} className="ProfileCard__body-info-mailIcon"/> {profile.email} </p>
+                    <p> <img src = {phoneIconUrl} className="ProfileCard__body-info-phoneIconUrlIcon"/> {profile.phoneNumber} </p>
+                    <p> <img src = {webSiteIconUrl} className="ProfileCard__body-info-webSiteIconUrl"/> {profile.webSite} </p>
+                    <p> <img src = {locationIconUrl} className="ProfileCard__body-info-locationIconUrl"/> {profile.town} </p>
                 </h2>
             </div>
 
