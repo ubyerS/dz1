@@ -13,6 +13,10 @@ html, body, #root {
 
 .App {
     background: linear-gradient(70deg, #9191ec, #773f4a);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
 }
 
 .ProfileCard {
@@ -163,8 +167,8 @@ html, body, #root {
     gap: 6px;
 }
 
-.ProfileCard__socials{
-    display: flex;
+.ProfileCard__socials li{
+    font-weight: normal;
 }
 
 .ProfileCard__socials b {

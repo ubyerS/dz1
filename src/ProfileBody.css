@@ -1,0 +1,79 @@
+.Profile__container {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 140px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.ProfileCard {
+    width: 352px;
+    position: sticky;
+    top: 20px;
+    align-self: start;
+}
+
+.ProfileBody__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ProfileBody {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ProfileBody h2 {
+    color: rgb(255, 255, 255);
+}
+
+.ProfileBody__skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.ProfileBody__skillCircle-progress {
+    --v: calc(((18/5) * var(--p, 0) - 90)*1deg);
+    --color: #82a6ed;
+    --bg-color: rgba(255, 255, 255, 0.1);
+
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px; /* Толщина индикатора */
+    box-sizing: border-box;
+
+    background:
+            linear-gradient(var(--bg-color), var(--bg-color)) content-box,
+            linear-gradient(var(--v), #f2f2f2 50%, transparent 0) 0/min(100%,(50 - var(--p, 0))*100%),
+            linear-gradient(var(--v), transparent 50%, var(--color) 0) 0/min(100%,(var(--p, 0) - 50)*100%),
+            linear-gradient(to right, #f2f2f2 50%, var(--color) 0);
+}
+
+.ProfileBody__skill-percent {
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+.skill-name {
+    margin-top: 8px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}

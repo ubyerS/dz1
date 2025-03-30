@@ -1,4 +1,5 @@
 import "./Profile.css";
+import {ProfileBodyProps} from "./ProfileBody.tsx";
 import mailIconUrl from './images/mail.svg';
 import phoneIconUrl from './images/phone.svg';
 import webSiteIconUrl from './images/group.svg';
@@ -30,6 +31,7 @@ export interface ProfileProps {
         mageBook : string;
         portalgram: string,
     }
+    body?: ProfileBodyProps;
 }
 
 
@@ -91,8 +93,8 @@ function ProfileCard(profile: ProfileProps) {
                 <h2> <b> Социальные сети </b>
                     <ul>
                         <li> <b> LinkedScroll: </b> {profile.socials.linkedScroll} </li>
-                        <li> MageBook: {profile.socials.mageBook}  </li>
-                        <li> Portalgram: {profile.socials.portalgram} </li>
+                        <li> <b> MageBook: </b> {profile.socials.mageBook}  </li>
+                        <li> <b> Portalgram: </b> {profile.socials.portalgram} </li>
                     </ul>
                 </h2>
             </div>
