@@ -52,7 +52,9 @@ function ProfileCard(profile: ProfileProps) {
                 <h2>
                     <p> <img src = {mailIconUrl} className="ProfileCard__body-info-mailIcon"/> {profile.email} </p>
                     <p> <img src = {phoneIconUrl} className="ProfileCard__body-info-phoneIconUrlIcon"/> {profile.phoneNumber} </p>
-                    <p> <img src = {webSiteIconUrl} className="ProfileCard__body-info-webSiteIconUrl"/> {profile.webSite} </p>
+                    <p> <img src = {webSiteIconUrl} className="ProfileCard__body-info-webSiteIconUrl"/>  <a href={`https://${profile.webSite}`} target="_blank" rel="noopener noreferrer">
+                        {profile.webSite}
+                    </a> </p>
                     <p> <img src = {locationIconUrl} className="ProfileCard__body-info-locationIconUrl"/> {profile.town} </p>
                 </h2>
             </div>
