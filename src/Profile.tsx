@@ -3,7 +3,11 @@ import mailIconUrl from './images/mail.svg';
 import phoneIconUrl from './images/phone.svg';
 import webSiteIconUrl from './images/group.svg';
 import locationIconUrl from './images/location.svg';
-import circleIconUrl from './images/circle.svg';
+
+export interface LanguageItem {
+    name: string;
+    level: number;
+}
 
 export interface ProfileProps {
     id : number;
@@ -19,7 +23,7 @@ export interface ProfileProps {
         items : string[];
     }
     languages : {
-        items : string[];
+        items : LanguageItem[];
     }
     socials : {
         linkedScroll : string;
@@ -31,16 +35,16 @@ export interface ProfileProps {
 
 function ProfileCard(profile: ProfileProps) {
     return(
-        <div className="ProfileCard">
+        <div className = "ProfileCard">
             <div className = "ProfileCard__avatar">
-                <img src  = {profile.avatarUrl } className="profile-avatar"/>
+                <img src  = {profile.avatarUrl } className="ProfileCard__profile-avatar"/>
             </div>
 
             <div className = "ProfileCard__header-info">
                 <h1>
-                    <span className="ProfileCard__header-info-name"> {profile.name} </span>
-                    <span className="ProfileCard__header-info-surname"> {profile.surname} </span>
-                    <span className="ProfileCard__header-info-job"> {profile.job} </span>
+                    <span className = "ProfileCard__header-info-name"> {profile.name} </span>
+                    <span className = "ProfileCard__header-info-surname"> {profile.surname} </span>
+                    <span className = "ProfileCard__header-info-job"> {profile.job} </span>
                 </h1>
             </div>
 
@@ -63,19 +67,31 @@ function ProfileCard(profile: ProfileProps) {
                 </h2>
             </div>
 
-            <div className = "ProfileCard__languages">
-                <h2> <b> Языки </b>
-                    {profile.languages.items.map((item) => (
-                        <p key = {item}> {item} <img src = {circleIconUrl}/> </p>
-                    ))}
+            <div className="ProfileCard__languages">
+                <h2><b>Языки</b>
+                {profile.languages.items.map((language) => (
+                    <div className="ProfileCard__languages-item" key={language.name}>
+                        <span>{language.name}</span>
+                        <div className="ProfileCard__languages-circles">
+                            {[1, 2, 3, 4, 5].map((level) => (
+                                <div
+                                    key={level}
+                                    className={`circle ${level <= language.level ? 'ProfileCard__languages-circleFilled' : 'ProfileCard__languages-circleEmpty'}`}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                ))}
                 </h2>
             </div>
 
             <div className = "ProfileCard__socials">
                 <h2> <b> Социальные сети </b>
-                    <p> <li> LinkedScroll: {profile.socials.linkedScroll} </li>  </p>
-                    <p> <li> MageBook: {profile.socials.mageBook}  </li> </p>
-                    <p> <li> Portalgram: {profile.socials.portalgram} </li> </p>
+                    <ul>
+                        <li> <b> LinkedScroll: </b> {profile.socials.linkedScroll} </li>
+                        <li> MageBook: {profile.socials.mageBook}  </li>
+                        <li> Portalgram: {profile.socials.portalgram} </li>
+                    </ul>
                 </h2>
             </div>
         </div>

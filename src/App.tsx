@@ -28,9 +28,9 @@ function App() {
         },
 
         languages : {
-            items : [
-                "Английский",
-                "Ревашольский",
+            items: [
+                { name: "Английский", level: 5 },
+                { name: "Ревашольский", level: 3 }
             ]
         },
 
