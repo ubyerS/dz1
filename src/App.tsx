@@ -4,13 +4,14 @@ import "./Profile.css";
 import "./ProfileBody.css"
 import './assets/fonts.css';
 import ProfileBody from "./ProfileBody.tsx";
+import * as React from "react";
 
 
 function App() {
-    const [currentProfile, setCurrentProfile] = useState(0);
-    const handleProfileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const [currentProfile, setCurrentProfile] = useState<number>(0);
+    const handleProfileChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setCurrentProfile(Number(e.target.value));
-    }
+    };
     const exampleProfile: ProfileProps = {
         id: 0,
         avatarUrl : "https://i.redd.it/harry-dubois-the-protagonist-of-disco-elysium-v0-5aw0ug8swd4d1.jpg?width=369&format=pjpg&auto=webp&s=bc882555863be225f6fa1c251c2853133df16e22",
@@ -48,6 +49,7 @@ function App() {
             experience: [
                 {
                     title: "Отдел морали RCM",
+                    post : "Лейтенант — дважды ефрейтор",
                     period: "<неизвестно> – настоящее время",
                     description: "Расследовал громкие дела через систему галлюцинаторного дедуктивного метода..."
                 }
@@ -55,21 +57,21 @@ function App() {
             education: [
                 {
                     institution: "Академия полиции Ревоколя",
-                    period: "<год окончания утерян>",
-                    specialty: "Курс 'Как не застрелить себя во время чистки оружия'"
+                    specialty: "Курс 'Как не застрелить себя во время чистки оружия'",
+                    period: "<год окончания утерян>"
                 }
             ],
             skills : {
                 items :[
-                    {name : "Внутренняя империя", level : 70},
-                    {name : "Грубая сила", level : 50},
-                    {name : "Раскрывать дела", level : 90},
+                    {name : "Внутренняя империя", level : "70"},
+                    {name : "Грубая сила", level : "50"},
+                    {name : "Раскрывать дела", level : "90"},
                 ]
             },
             hobbies : {
                 items :[
-                    {name : "Пить", level : 100},
-                    {name : "Раскрывать дела", level : 90},
+                    {name : "Пить", level : "100"},
+                    {name : "Раскрывать дела", level : "90"},
                 ]
 
             }

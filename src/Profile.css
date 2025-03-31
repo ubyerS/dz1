@@ -1,6 +1,6 @@
 :root {
     --max-content-width: 1300px;
-    --content-padding: 20px;
+    --content-padding: 0;
 }
 
 html, body, #root {
@@ -127,7 +127,8 @@ html, body, #root {
 
 }
 
-.ProfileCard__specialisations b {
+.ProfileCard__specialisations b,
+.ProfileCard__socials b{
     font-weight: bold;
 }
 
@@ -171,6 +172,3 @@ html, body, #root {
     font-weight: normal;
 }
 
-.ProfileCard__socials b {
-    font-weight: bold;
-}
