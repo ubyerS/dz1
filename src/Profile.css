@@ -112,9 +112,11 @@ body,
 }
 
 .ProfileCard__specialisations ul {
+  display: flex;
+  flex-direction: column;
   font-size: 14px;
   font-weight: normal;
-  margin-top: 0;
+  margin: 0;
 }
 
 .ProfileCard__languages-title {
@@ -127,7 +129,7 @@ body,
 .ProfileCard__specialisations,
 .ProfileCard__languages {
   width: 366px;
-  height: 140px;
+  height: 108px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -142,7 +144,7 @@ body,
   font-size: 14px;
   display: flex;
   align-self: center;
-  padding: 8px 0;
+  padding: 0 0 8px 0;
   flex-direction: column;
   gap: 4px;
   margin-top: 0;

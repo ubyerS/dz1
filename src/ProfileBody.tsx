@@ -42,7 +42,7 @@ function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
   return (
     <div className="ProfileBody">
       <div className="ProfileBody__aboutMe">
-        <h2>Обо мне </h2>
+        <h2>ОБО МНЕ</h2>
         <p>
           {" "}
           <span className="ProfileBody__aboutMe-info">
@@ -54,7 +54,7 @@ function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
 
       {profileBody.experience && (
         <div className="ProfileBody__experience">
-          <h2>Опыт</h2>
+          <h2>ОПЫТ</h2>
           {profileBody.experience.map((exp, index) => (
             <div key={index} className="ProfileBody__experience-item">
               <h3 className="ProfileBody__experience-title">{exp.title}</h3>
@@ -70,7 +70,7 @@ function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
 
       {profileBody.education && (
         <div className="ProfileBody__education">
-          <h2>Образование</h2>
+          <h2>ОБРАЗОВАНИЕ</h2>
           {profileBody.education.map((edu, index) => (
             <div key={index} className="ProfileBody__education-item">
               <h3 className="ProfileBody__education-institution">
@@ -86,7 +86,7 @@ function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
       )}
 
       <div className="ProfileBody__skills">
-        <h2>Навыки</h2>
+        <h2>НАВЫКИ</h2>
         <div className="ProfileBody__skills-container">
           {profileBody.skills.items.map((skill, index) => (
             <div key={index} className="ProfileBody__skill-item">
@@ -105,7 +105,7 @@ function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
       </div>
 
       <div className="ProfileBody__hobbies">
-        <h2>Хобби</h2>
+        <h2>ХОББИ</h2>
         <div className="ProfileBody__hobbies-container">
           {profileBody.hobbies.items.map((hobby, index) => (
             <div key={index} className="ProfileBody__hobby-item">
