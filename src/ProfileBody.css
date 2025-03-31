@@ -1,154 +1,167 @@
 .Profile__container {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 140px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 0 40px;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .ProfileCard {
-    width: 352px;
-    position: sticky;
-    top: 20px;
-    align-self: start;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  width: 366px;
+  height: 1048px;
+  position: sticky;
+  top: 20px;
+  margin-left: 120px;
+  align-self: start;
+  border: 48px solid transparent;
+  border-radius: 10px;
 }
 
 .ProfileBody__container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .ProfileBody {
-    width: 100%;
-    max-width: 800px;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .ProfileBody h2 {
-    color: rgb(255, 255, 255);
-    width: 80px;
-    white-space: nowrap;
-    display: inline-flex;
-    justify-content: center;
-    align-self: center;
-    background: rgba(12, 19, 58, 0.55);
-    padding: 8px 64px 8px 64px;
-    position: relative;
-    z-index: 1;
-    font-size: 20px;
-    margin: 0;
-    border-radius: 8px;
+  color: rgb(255, 255, 255);
+  width: 80px;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+  background: rgba(12, 19, 58, 0.55);
+  padding: 8px 64px 8px 64px;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  margin: 0;
+  border-radius: 4px;
 }
 
 .ProfileBody h2::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: 290%;
-    height: 1px;
-    background: rgba(12, 19, 58, 0.55);
-    transform: translateY(-50%);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 290%;
+  height: 1px;
+  background: rgba(12, 19, 58, 0.55);
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 .ProfileBody__skills-container,
 .ProfileBody__hobbies-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .ProfileBody__skill-item,
-.ProfileBody__hobby-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.ProfileBody__hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ProfileBody__skillCircle-progress,
 .ProfileBody__hobbyCircle-progress {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ProfileBody__skillCircle-progress::before,
 .ProfileBody__hobbyCircle-progress::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: conic-gradient(
-            #003693 0% var(--progress),
-            rgba(255, 255, 255, 0.1) var(--progress) 100%
-    );
-    z-index: 1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #003693 0% var(--progress),
+    rgba(255, 255, 255, 0.1) var(--progress) 100%
+  );
+  z-index: 1;
 }
 
 .ProfileBody__skillCircle-progress::after,
 .ProfileBody__hobbyCircle-progress::after {
-    content: '';
-    position: absolute;
-    width: 84%;
-    height: 84%;
-    border-radius: 50%;
-    background: #d6d6d6;
-    z-index: 2;
+  content: "";
+  position: absolute;
+  width: 84%;
+  height: 84%;
+  border-radius: 50%;
+  background: #d6d6d6;
+  z-index: 2;
 }
 
 .ProfileBody__skill-percent,
 .ProfileBody__hobby-percent {
-    position: relative;
-    z-index: 3;
-    font-weight: bold;
-    color: #000000;
-    font-size: 18px;
+  position: relative;
+  z-index: 3;
+  font-weight: bold;
+  color: #000000;
+  font-size: 14px;
 }
 
 .ProfileBody__skill-name,
 .ProfileBody__hobby-name {
-    margin-top: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
 }
 
 .ProfileBody__experience-title,
-.ProfileBody__education-institution{
-    font-size: 24px;
-    margin-bottom: 0;
-    margin-top: 12px;
+.ProfileBody__education-institution {
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 12px;
 }
 
 .ProfileBody__experience-post,
-.ProfileBody__education-specialty{
-    font-size: 20px;
-    margin-top: 4px;
-    margin-bottom: 0;
+.ProfileBody__education-specialty {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.ProfileBody__experience-description,
+.ProfileBody__aboutMe-info {
+  font-size: 14px;
 }
 
 .ProfileBody__experience-period,
-.ProfileBody__education-period{
-    font-size: 16px;
-    color: rgba(181, 191, 200, 0.7);
-    margin-top: 4px;
-    margin-bottom: 8px;
+.ProfileBody__education-period {
+  font-size: 14px;
+  color: rgba(181, 191, 200, 0.7);
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
-.ProfileBody__experience-description{
-    margin-top: 4px;
+.ProfileBody__experience-description {
+  margin-top: 4px;
 }
