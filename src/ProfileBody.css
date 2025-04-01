@@ -31,7 +31,7 @@
   width: 738px;
   height: 1048px;
   padding: 32px 14px 14px 14px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -44,7 +44,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: rgba(12, 19, 58, 0.55);
+  background: rgb(84, 84, 84);
   padding: 4px 28px 4px 28px;
   position: relative;
   z-index: 1;
@@ -61,7 +61,7 @@
   width: 570px;
   margin-right: 14px;
   height: 1px;
-  background: rgba(12, 19, 58, 0.55);
+  background: rgb(84, 84, 84);
   transform: translateY(-50%);
   z-index: -1;
 }
