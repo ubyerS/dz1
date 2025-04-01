@@ -38,13 +38,14 @@
 
 .ProfileBody h2 {
   color: rgb(255, 255, 255);
-  width: 164px;
+  width: 112px;
+  height: 16px;
   white-space: nowrap;
   display: inline-flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
   background: rgba(12, 19, 58, 0.55);
-  padding: 8px 64px 8px 64px;
+  padding: 4px 28px 4px 28px;
   position: relative;
   z-index: 1;
   font-size: 14px;
@@ -57,7 +58,7 @@
   position: absolute;
   top: 50%;
   left: 100%;
-  width: 445px;
+  width: 570px;
   margin-right: 14px;
   height: 1px;
   background: rgba(12, 19, 58, 0.55);
