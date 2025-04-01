@@ -11,7 +11,7 @@ function App() {
   const handleProfileChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCurrentProfile(Number(e.target.value));
   };
-  const exampleProfile: ProfileProps = {
+  const EXAMPLE_PROFILE: ProfileProps = {
     id: 0,
     avatarUrl:
       "https://i.redd.it/harry-dubois-the-protagonist-of-disco-elysium-v0-5aw0ug8swd4d1.jpg?width=369&format=pjpg&auto=webp&s=bc882555863be225f6fa1c251c2853133df16e22",
@@ -74,7 +74,7 @@ function App() {
     },
   };
 
-  const Profiles: ProfileProps[] = [exampleProfile];
+  const PROFILES: ProfileProps[] = [EXAMPLE_PROFILE];
   return (
     <div className="App">
       <div className="Profile__selector">
@@ -83,7 +83,7 @@ function App() {
           onChange={handleProfileChange}
           className="Profile__dropdown"
         >
-          {Profiles.map((profile, index) => (
+          {PROFILES.map((profile, index) => (
             <option key={profile.id} value={index}>
               {profile.name} {profile.surname}
             </option>
@@ -91,10 +91,10 @@ function App() {
         </select>
       </div>
       <div className="Profile__container">
-        <ProfileCard {...Profiles[currentProfile]} />
+        <ProfileCard {...PROFILES[currentProfile]} />
         <div className="ProfileBody__container">
-          {Profiles[currentProfile].body && (
-            <ProfileBody {...Profiles[currentProfile].body!} />
+          {PROFILES[currentProfile].body && (
+            <ProfileBody {...PROFILES[currentProfile].body!} />
           )}
         </div>
       </div>

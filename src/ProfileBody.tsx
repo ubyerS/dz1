@@ -1,11 +1,6 @@
 import "./ProfileBody.css";
 import { ReactElement } from "react";
-
-declare module "react" {
-  interface CSSProperties {
-    "--progress"?: string;
-  }
-}
+import * as React from "react";
 
 export interface SkillsInfo {
   name: string;
@@ -44,11 +39,9 @@ function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
       <div className="ProfileBody__aboutMe">
         <h2>ОБО МНЕ</h2>
         <p>
-          {" "}
           <span className="ProfileBody__aboutMe-info">
-            {" "}
-            {profileBody.aboutMeInfo}{" "}
-          </span>{" "}
+            {profileBody.aboutMeInfo}
+          </span>
         </p>
       </div>
 
@@ -92,7 +85,9 @@ function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
             <div key={index} className="ProfileBody__skill-item">
               <div
                 className="ProfileBody__skillCircle-progress"
-                style={{ "--progress": `${skill.level}%` }}
+                style={
+                  { "--progress": `${skill.level}%` } as React.CSSProperties
+                }
               >
                 <span className="ProfileBody__skill-percent">
                   {skill.level}%
@@ -111,7 +106,9 @@ function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
             <div key={index} className="ProfileBody__hobby-item">
               <div
                 className="ProfileBody__hobbyCircle-progress"
-                style={{ "--progress": `${hobby.level}%` }}
+                style={
+                  { "--progress": `${hobby.level}%` } as React.CSSProperties
+                }
               >
                 <span className="ProfileBody__hobby-percent">
                   {hobby.level}%

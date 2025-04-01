@@ -34,6 +34,8 @@ export interface ProfileProps {
   body?: ProfileBodyProps;
 }
 
+const KNOWLEDGE_LEVELS = [1, 2, 3, 4, 5];
+
 function ProfileCard(profile: ProfileProps) {
   return (
     <div className="ProfileCard">
@@ -43,13 +45,9 @@ function ProfileCard(profile: ProfileProps) {
 
       <div className="ProfileCard__header-info">
         <h1>
-          <span className="ProfileCard__header-info-name">
-            {" "}
-            {profile.name}{" "}
-          </span>
+          <span className="ProfileCard__header-info-name">{profile.name}</span>
           <span className="ProfileCard__header-info-surname">
-            {" "}
-            {profile.surname}{" "}
+            {profile.surname}
           </span>
           <span className="ProfileCard__header-info-job"> {profile.job} </span>
         </h1>
@@ -58,49 +56,44 @@ function ProfileCard(profile: ProfileProps) {
       <div className="ProfileCard__body-info">
         <h2>
           <p>
-            {" "}
             <img
               src={mailIconUrl}
               className="ProfileCard__body-info-mailIcon"
-            />{" "}
-            {profile.email}{" "}
+            />
+            {profile.email}
           </p>
           <p>
-            {" "}
             <img
               src={phoneIconUrl}
               className="ProfileCard__body-info-phoneIconUrlIcon"
-            />{" "}
-            {profile.phoneNumber}{" "}
+            />
+            {profile.phoneNumber}
           </p>
           <p>
-            {" "}
             <img
               src={webSiteIconUrl}
               className="ProfileCard__body-info-webSiteIconUrl"
-            />{" "}
+            />
             <a
               href={`https://${profile.webSite}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               {profile.webSite}
-            </a>{" "}
+            </a>
           </p>
           <p>
-            {" "}
             <img
               src={locationIconUrl}
               className="ProfileCard__body-info-locationIconUrl"
-            />{" "}
-            {profile.town}{" "}
+            />
+            {profile.town}
           </p>
         </h2>
       </div>
 
       <div className="ProfileCard__specialisations">
         <h2>
-          {" "}
           <b> Специализация </b>
         </h2>
         <ul>
@@ -119,7 +112,7 @@ function ProfileCard(profile: ProfileProps) {
             <li className="ProfileCard__languages-item" key={language.name}>
               <span>{language.name}</span>
               <div className="ProfileCard__languages-circles">
-                {[1, 2, 3, 4, 5].map((level) => (
+                {KNOWLEDGE_LEVELS.map((level) => (
                   <div
                     key={level}
                     className={`circle ${level <= language.level ? "ProfileCard__languages-circleFilled" : "ProfileCard__languages-circleEmpty"}`}
@@ -133,20 +126,16 @@ function ProfileCard(profile: ProfileProps) {
 
       <div className="ProfileCard__socials">
         <h2>
-          {" "}
-          <b> Социальные сети </b>
+          <b>Социальные сети </b>
           <ul>
             <li>
-              {" "}
-              <b> LinkedScroll: </b> {profile.socials.linkedScroll}{" "}
+              <b> LinkedScroll: </b> {profile.socials.linkedScroll}
             </li>
             <li>
-              {" "}
-              <b> MageBook: </b> {profile.socials.mageBook}{" "}
+              <b> MageBook: </b> {profile.socials.mageBook}
             </li>
             <li>
-              {" "}
-              <b> Portalgram: </b> {profile.socials.portalgram}{" "}
+              <b> Portalgram: </b> {profile.socials.portalgram}
             </li>
           </ul>
         </h2>

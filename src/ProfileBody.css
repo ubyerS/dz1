@@ -1,9 +1,9 @@
 .Profile__container {
-  display: grid;
-  grid-template-columns: 360px 1fr;
+  display: flex;
   gap: 32px;
-  width: 100%;
-  margin: 20px auto;
+  width: 1680px;
+  height: 1280px;
+  margin: 20px 0;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -13,26 +13,25 @@
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  width: 366px;
+  margin-left: 320px;
+  width: 430px;
   height: 1048px;
-  position: sticky;
   top: 20px;
-  margin-left: 120px;
+
   align-self: start;
-  border: 48px solid transparent;
+  border: 32px solid transparent;
   border-radius: 10px;
 }
 
 .ProfileBody__container {
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .ProfileBody {
-  width: 100%;
-  max-width: 800px;
-  padding: 40px;
+  width: 738px;
+  height: 1048px;
+  padding: 32px 14px 14px 14px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -40,7 +39,7 @@
 
 .ProfileBody h2 {
   color: rgb(255, 255, 255);
-  width: 80px;
+  width: 164px;
   white-space: nowrap;
   display: inline-flex;
   justify-content: center;
@@ -59,23 +58,31 @@
   position: absolute;
   top: 50%;
   left: 100%;
-  width: 290%;
+  width: 500px;
+  margin-right: 14px;
   height: 1px;
   background: rgba(12, 19, 58, 0.55);
   transform: translateY(-50%);
   z-index: -1;
 }
 
+.ProfileBody__aboutMe p {
+  margin: 12px 0 24px 0;
+}
+
 .ProfileBody__skills-container,
 .ProfileBody__hobbies-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 30px;
-  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin-top: 12px;
 }
 
 .ProfileBody__skill-item,
 .ProfileBody__hobby-item {
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,6 +135,8 @@
 
 .ProfileBody__skill-name,
 .ProfileBody__hobby-name {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 8px;
   font-size: 12px;
   font-weight: bold;
@@ -154,14 +163,20 @@
   font-size: 14px;
 }
 
-.ProfileBody__experience-period,
-.ProfileBody__education-period {
+.ProfileBody__experience-period {
   font-size: 14px;
   color: rgba(181, 191, 200, 0.7);
-  margin-top: 4px;
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
 .ProfileBody__experience-description {
-  margin-top: 4px;
+  margin: 0 0 24px 0;
+}
+
+.ProfileBody__education-period {
+  font-size: 14px;
+  color: rgba(181, 191, 200, 0.7);
+  margin-top: 0;
+  margin-bottom: 24px;
 }
