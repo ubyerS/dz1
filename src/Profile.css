@@ -190,8 +190,9 @@ body,
 
 .ProfileCard__languages-circles {
   display: flex;
+  align-self: center;
   margin-left: 160px;
-  gap: 6px;
+  gap: 4px;
 }
 
 .ProfileCard__socials {

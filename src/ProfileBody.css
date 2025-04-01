@@ -2,8 +2,8 @@
   display: flex;
   gap: 32px;
   width: 1680px;
-  height: 1280px;
-  margin: 20px 0;
+  height: 1180px;
+  margin: 16px 0;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -17,9 +17,8 @@
   width: 430px;
   height: 1048px;
   top: 20px;
-
   align-self: start;
-  border: 32px solid transparent;
+  padding: 32px 32px 14px 32px;
   border-radius: 10px;
 }
 
@@ -58,7 +57,7 @@
   position: absolute;
   top: 50%;
   left: 100%;
-  width: 500px;
+  width: 445px;
   margin-right: 14px;
   height: 1px;
   background: rgba(12, 19, 58, 0.55);
@@ -137,6 +136,7 @@
 .ProfileBody__hobby-name {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 8px;
   font-size: 12px;
   font-weight: bold;
