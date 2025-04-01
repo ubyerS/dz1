@@ -129,12 +129,13 @@
   position: relative;
   z-index: 3;
   font-weight: bold;
-  color: #000000;
+  color: #545454;
   font-size: 14px;
 }
 
 .ProfileBody__skill-name,
 .ProfileBody__hobby-name {
+  color: rgb(84, 84, 84);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -147,6 +148,7 @@
 
 .ProfileBody__experience-title,
 .ProfileBody__education-institution {
+  color: rgb(52, 52, 52);
   font-size: 18px;
   margin-bottom: 0;
   margin-top: 12px;
@@ -154,6 +156,7 @@
 
 .ProfileBody__experience-post,
 .ProfileBody__education-specialty {
+  color: rgb(52, 52, 52);
   font-size: 14px;
   margin-top: 4px;
   margin-bottom: 0;
