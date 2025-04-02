@@ -74,7 +74,7 @@ function ProfileCard(profile: ProfileProps) {
               src={webSiteIconUrl}
               className="ProfileCard__body-info-webSiteIconUrl"
             />
-            <a
+            <a className = "ProfileCard__body-info-webSite-link"
               href={`https://${profile.webSite}`}
               target="_blank"
               rel="noopener noreferrer"

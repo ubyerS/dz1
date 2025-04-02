@@ -13,26 +13,27 @@
   align-self: center;
 }
 
+.ProfileCard__body-info h2 {
+  font-weight: normal;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .ProfileCard__body-info p {
   font-size: 14px;
   display: flex;
   align-items: center;
   padding: 12px;
   margin: 4px 0;
-  width: 418px;
-  height: 38px;
-  box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-}
-
-.ProfileCard__socials {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  margin: 4px 0;
   width: 100%;
+  max-width: 366px;
+  height: auto;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
@@ -84,15 +85,6 @@
   margin: 0;
 }
 
-.ProfileCard__body-info h2 {
-  font-weight: normal;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
 
 .ProfileCard__body-info-mailIcon,
 .ProfileCard__body-info-phoneIconUrlIcon,
@@ -102,6 +94,12 @@
   justify-content: space-between;
   margin-right: 24px;
   padding-left: 4px;
+}
+
+.ProfileCard__body-info-webSite-link{
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
 }
 
 .ProfileCard__specialisations h2 {
@@ -117,6 +115,7 @@
   flex-direction: column;
   font-size: 14px;
   font-weight: normal;
+  padding-bottom: 16px;
   margin: 0;
 }
 
@@ -129,8 +128,9 @@
 
 .ProfileCard__specialisations,
 .ProfileCard__languages {
-  width: 418px;
-  height: 104px;
+  width: 100%;
+  max-width: 418px;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -147,14 +147,14 @@
   padding: 0 16px 16px 16px;
   flex-direction: column;
   gap: 4px;
-  margin-top: 0;
+  margin: 0;
 }
 
 .ProfileCard__languages-item {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 4px 0;
+  padding: 0;
 }
 
 .ProfileCard__languages-circleFilled {
@@ -182,13 +182,22 @@
 
 .ProfileCard__socials {
   display: flex;
-  width: 418px;
-  height: 112px;
-  padding-bottom: 0;
+  width: 100%;
+  max-width: 418px;
+  height: auto;
+  max-height: 106px;
+  font-size: 14px;
+  align-items: center;
+  padding: 16px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
 }
 
 .ProfileCard__socials h2 {
-  margin-top: 4px;
+  height: auto;
+  margin: 0;
 }
 
 .ProfileCard__socials b {
@@ -203,5 +212,28 @@
   font-weight: normal;
   font-size: 14px;
   padding: 0 0 0 24px;
-  margin: 8px 0px 16px 0px;
+  margin: 8px 0 16px 0;
+}
+
+@media (max-width: 1299px) {
+  .ProfileCard__container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .ProfileCard__header-info {
+    width: 250px;
+    flex-shrink: 0;
+  }
+
+  .ProfileCard__body-content {
+    flex-grow: 1;
+  }
+
+  .ProfileCard__avatar {
+    width: 120px;
+    height: 120px;
+  }
 }

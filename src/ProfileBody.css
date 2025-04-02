@@ -1,11 +1,14 @@
 .Profile__container {
   display: flex;
   gap: 32px;
-  width: 1680px;
-  height: 1180px;
-  margin: 16px 0;
+  width: 100%;
+  max-width: 1680px;
+  height: auto;
+  min-height: 1048px;
+  margin: 16px auto;
   padding: 0 40px;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .ProfileCard {
@@ -13,9 +16,10 @@
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  margin-left: 320px;
-  width: 430px;
-  height: 1048px;
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  min-height: 1048px;
   top: 20px;
   align-self: start;
   padding: 32px 32px 14px 32px;
@@ -28,8 +32,9 @@
 }
 
 .ProfileBody {
-  width: 738px;
-  height: 1048px;
+  width: 100%;
+  max-width: 738px;
+  height: auto;
   padding: 32px 14px 14px 14px;
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
@@ -38,7 +43,8 @@
 
 .ProfileBody h2 {
   color: rgb(255, 255, 255);
-  width: 112px;
+  width: 100%;
+  max-width: 112px;
   height: 16px;
   white-space: nowrap;
   display: inline-flex;
@@ -56,9 +62,10 @@
 .ProfileBody h2::after {
   content: "";
   position: absolute;
+  flex: 1;
+  width: auto;
   top: 50%;
   left: 100%;
-  width: 570px;
   margin-right: 14px;
   height: 1px;
   background: rgb(84, 84, 84);
@@ -184,3 +191,49 @@
   margin-top: 0;
   margin-bottom: 24px;
 }
+
+@media (max-width: 1279px) {
+  .Profile__container {
+    padding: 0 32px;
+  }
+
+  .ProfileCard {
+    width: 380px;
+    padding: 28px;
+  }
+
+  .ProfileBody {
+    width: 600px;
+    padding: 28px 12px;
+  }
+
+  .ProfileBody h2::after {
+    width: 450px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .Profile__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 24px;
+  }
+
+  .ProfileCard,
+  .ProfileBody {
+    width: 100%;
+    max-width: 650px;
+    margin-left: 0;
+  }
+
+  .ProfileBody h2::after {
+    width: calc(100% - 150px);
+  }
+
+  .ProfileBody__skills-container,
+  .ProfileBody__hobbies-container {
+    flex-wrap: wrap;
+  }
+}
+
