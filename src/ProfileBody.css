@@ -157,9 +157,24 @@
 .ProfileBody__education-institution {
   color: rgb(52, 52, 52);
   font-size: 18px;
-  margin-bottom: 0;
-  margin-top: 12px;
+  margin: 0;
 }
+
+.ProfileBody__experience,
+.ProfileBody__education {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ProfileBody__experience-description,
+.ProfileBody__education-period {
+  margin: 0;
+}
+
+.ProfileBody__education {}
 
 .ProfileBody__experience-post,
 .ProfileBody__education-specialty {
@@ -174,22 +189,13 @@
   font-size: 14px;
 }
 
-.ProfileBody__experience-period {
+.ProfileBody__experience-period,
+.ProfileBody__education-period{
   font-size: 14px;
+  font-weight: normal;
   color: rgb(115, 128, 141);
-  margin-top: 0;
-  margin-bottom: 8px;
-}
+  margin: 0;
 
-.ProfileBody__experience-description {
-  margin: 0 0 24px 0;
-}
-
-.ProfileBody__education-period {
-  font-size: 14px;
-  color: rgb(115, 128, 141);
-  margin-top: 0;
-  margin-bottom: 24px;
 }
 
 @media (max-width: 1279px) {

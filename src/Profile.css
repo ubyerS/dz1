@@ -13,19 +13,8 @@
   align-self: center;
 }
 
-.ProfileCard__body-info h2 {
-  font-weight: normal;
-  width: 100%;
-  max-width: 430px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .ProfileCard__body-info p {
+  font-weight: normal;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -37,6 +26,11 @@
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
+}
+
+.ProfileCard__body-info h2{
+  width: max-content;
+  margin: 0;
 }
 
 .ProfileCard__avatar {
