@@ -54,7 +54,7 @@ function ProfileCard(profile: ProfileProps) {
       </div>
 
       <div className="ProfileCard__body-info">
-        <h2>
+        <h2 className="ProfileCard__body-info-header">
           <p>
             <img
               src={mailIconUrl}
@@ -74,7 +74,8 @@ function ProfileCard(profile: ProfileProps) {
               src={webSiteIconUrl}
               className="ProfileCard__body-info-webSiteIconUrl"
             />
-            <a className = "ProfileCard__body-info-webSite-link"
+            <a
+              className="ProfileCard__body-info-webSite-link"
               href={`https://${profile.webSite}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -93,7 +94,7 @@ function ProfileCard(profile: ProfileProps) {
       </div>
 
       <div className="ProfileCard__specialisations">
-        <h2>
+        <h2 className="ProfileCard__specialisations-header">
           <b> Специализация </b>
         </h2>
         <ul>

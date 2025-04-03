@@ -43,34 +43,47 @@
 
 .ProfileBody h2 {
   color: rgb(255, 255, 255);
-  width: 100%;
-  max-width: 112px;
+  width: 112px;
   height: 16px;
-  white-space: nowrap;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   background: rgb(84, 84, 84);
   padding: 4px 28px 4px 28px;
-  position: relative;
-  z-index: 1;
   font-size: 14px;
+  z-index: 1;
+  flex-shrink: 0;
   margin: 0;
   border-radius: 4px;
 }
 
-.ProfileBody h2::after {
+.ProfileBody__aboutMe-header,
+.ProfileBody__experience-header,
+.ProfileBody__education-header,
+.ProfileBody__skills-header,
+.ProfileBody__hobbies-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.ProfileBody__aboutMe-header::after,
+.ProfileBody__experience-header::after,
+.ProfileBody__education-header::after,
+.ProfileBody__skills-header::after,
+.ProfileBody__hobbies-header::after {
   content: "";
   position: absolute;
   flex: 1;
-  width: auto;
   top: 50%;
-  left: 100%;
-  margin-right: 14px;
+  width: auto;
+  left: calc(20% + 16px);
+  right: 0;
   height: 1px;
   background: rgb(84, 84, 84);
   transform: translateY(-50%);
-  z-index: -1;
+  z-index: 2;
 }
 
 .ProfileBody__aboutMe p {
@@ -174,8 +187,6 @@
   margin: 0;
 }
 
-.ProfileBody__education {}
-
 .ProfileBody__experience-post,
 .ProfileBody__education-specialty {
   color: rgb(52, 52, 52);
@@ -190,12 +201,11 @@
 }
 
 .ProfileBody__experience-period,
-.ProfileBody__education-period{
+.ProfileBody__education-period {
   font-size: 14px;
   font-weight: normal;
   color: rgb(115, 128, 141);
   margin: 0;
-
 }
 
 @media (max-width: 1279px) {
@@ -242,4 +252,3 @@
     flex-wrap: wrap;
   }
 }
-

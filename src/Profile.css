@@ -6,11 +6,11 @@
   justify-content: flex-start;
 }
 
-.ProfileCard__specialisations,
-.ProfileCard__body-info,
-.ProfileCard__languages,
-.ProfileCard__socials {
-  align-self: center;
+.ProfileCard__body-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 4px 0;
 }
 
 .ProfileCard__body-info p {
@@ -19,18 +19,12 @@
   display: flex;
   align-items: center;
   padding: 12px;
-  margin: 4px 0;
+  margin: 0;
   width: 100%;
-  max-width: 366px;
   height: auto;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
-}
-
-.ProfileCard__body-info h2{
-  width: max-content;
-  margin: 0;
 }
 
 .ProfileCard__avatar {
@@ -49,9 +43,9 @@
 }
 
 .ProfileCard__header-info h1 {
-  width: 366px;
-  height: 106px;
-  margin: 8px 0 20px 0;
+  width: 100%;
+  height: auto;
+  margin: 8px 0 24px 0;
 }
 
 .ProfileCard__header-info-name {
@@ -79,7 +73,6 @@
   margin: 0;
 }
 
-
 .ProfileCard__body-info-mailIcon,
 .ProfileCard__body-info-phoneIconUrlIcon,
 .ProfileCard__body-info-webSiteIconUrl,
@@ -90,18 +83,17 @@
   padding-left: 4px;
 }
 
-.ProfileCard__body-info-webSite-link{
+.ProfileCard__body-info-webSite-link {
   text-decoration: none;
   color: inherit;
   transition: color 0.2s;
 }
 
-.ProfileCard__specialisations h2 {
+.ProfileCard__specialisations-header {
   font-size: 14px;
   font-weight: bold;
   padding: 0;
-  margin-bottom: 0;
-  margin-left: 16px;
+  margin: 16px 0 0 16px;
 }
 
 .ProfileCard__specialisations ul {
@@ -123,7 +115,6 @@
 .ProfileCard__specialisations,
 .ProfileCard__languages {
   width: 100%;
-  max-width: 418px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -177,7 +168,6 @@
 .ProfileCard__socials {
   display: flex;
   width: 100%;
-  max-width: 418px;
   height: auto;
   max-height: 106px;
   font-size: 14px;
