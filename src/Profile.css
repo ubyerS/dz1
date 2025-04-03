@@ -22,6 +22,7 @@
   margin: 0;
   width: 100%;
   height: auto;
+  max-height: 38px;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
@@ -43,8 +44,12 @@
 }
 
 .ProfileCard__header-info h1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
   height: auto;
+  max-height: 106px;
   margin: 8px 0 24px 0;
 }
 
@@ -108,8 +113,7 @@
 .ProfileCard__languages-title {
   font-size: 14px;
   padding: 0;
-  margin-bottom: 0;
-  margin-left: 16px;
+  margin: 16px 0 0 16px;
 }
 
 .ProfileCard__specialisations,
@@ -129,6 +133,7 @@
   list-style-type: none;
   font-size: 14px;
   display: flex;
+  box-sizing: border-box;
   padding: 0 16px 16px 16px;
   flex-direction: column;
   gap: 4px;
@@ -137,8 +142,9 @@
 
 .ProfileCard__languages-item {
   display: flex;
+  width: 100%;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 0;
 }
 
@@ -160,9 +166,8 @@
 
 .ProfileCard__languages-circles {
   display: flex;
-  align-self: center;
-  margin-left: 160px;
   gap: 4px;
+  margin-left: auto;
 }
 
 .ProfileCard__socials {
