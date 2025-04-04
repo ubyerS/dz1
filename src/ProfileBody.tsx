@@ -1,5 +1,4 @@
 import "./ProfileBody.css";
-import { ReactElement } from "react";
 import * as React from "react";
 
 export interface SkillsInfo {
@@ -33,7 +32,7 @@ export interface ProfileBodyProps {
   };
 }
 
-function ProfileBody(profileBody: ProfileBodyProps): ReactElement {
+function ProfileBody(profileBody: ProfileBodyProps) {
   return (
     <div className="ProfileBody">
       <div className="ProfileBody__aboutMe">

@@ -1,11 +1,9 @@
 import * as React from "react";
 import { useState } from "react";
-import ProfileCard from "./Profile";
+import ProfileCard from "./ProfileCard.tsx";
 import ProfileBody from "./ProfileBody";
 import PROFILES from "./profilesData";
-import "./Profile.css";
-import "./ProfileBody.css";
-import "./assets/fonts.css";
+
 
 function App() {
   const [currentProfile, setCurrentProfile] = useState<number>(0);

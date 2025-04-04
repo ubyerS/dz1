@@ -1,7 +1,7 @@
-import { ProfileProps } from "./Profile.tsx";
+import { ProfileCardProps } from "./ProfileCard.tsx";
 import kimAvatarUrl from "./assets/kim.jfif";
 
-const HURRY_PROFILE: ProfileProps = {
+const HURRY_PROFILE: ProfileCardProps = {
   id: 0,
   avatarUrl:
     "https://i.redd.it/harry-dubois-the-protagonist-of-disco-elysium-v0-5aw0ug8swd4d1.jpg?width=369&format=pjpg&auto=webp&s=bc882555863be225f6fa1c251c2853133df16e22",
@@ -85,7 +85,7 @@ const HURRY_PROFILE: ProfileProps = {
   },
 };
 
-const KIM_PROFILE: ProfileProps = {
+const KIM_PROFILE: ProfileCardProps = {
   id: 1,
   avatarUrl: kimAvatarUrl,
   name: "Ким",
@@ -175,6 +175,6 @@ const KIM_PROFILE: ProfileProps = {
   },
 };
 
-const PROFILES: ProfileProps[] = [HURRY_PROFILE, KIM_PROFILE];
+const PROFILES: ProfileCardProps[] = [HURRY_PROFILE, KIM_PROFILE];
 
 export default PROFILES;

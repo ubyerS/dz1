@@ -1,4 +1,4 @@
-import "./Profile.css";
+import "./ProfileCard.css";
 import { ProfileBodyProps } from "./ProfileBody.tsx";
 import mailIconUrl from "./images/mail.svg";
 import phoneIconUrl from "./images/phone.svg";
@@ -10,7 +10,7 @@ export interface LanguageItem {
   level: number;
 }
 
-export interface ProfileProps {
+export interface ProfileCardProps {
   id: number;
   avatarUrl: string;
   name: string;
@@ -36,7 +36,7 @@ export interface ProfileProps {
 
 const KNOWLEDGE_LEVELS = [1, 2, 3, 4, 5];
 
-function ProfileCard(profile: ProfileProps) {
+function ProfileCard(profile: ProfileCardProps) {
   return (
     <div className="ProfileCard">
       <div className="ProfileCard__avatar">
